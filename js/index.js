@@ -94,3 +94,14 @@ let navs=document.querySelectorAll('nav a');
             e.target.preventDefault();
     })
 })
+
+//Socks
+TweenMax.staggerFrom('.nav-link', 4, {
+    x: 200,
+    ease: Bounce.easeOut,
+    y: 500,
+    opacity:0,
+    delay:1,
+    // rotation:360,
+    // padding:100
+  },.4) 
