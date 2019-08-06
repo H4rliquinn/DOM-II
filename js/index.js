@@ -51,14 +51,6 @@ function move(e){
     console.log(e,e.deltaY);
 }
 
-// drag / drop
-
-// focus
-
-// resize
-
-// select
-
 // dblclick
 let clicks=0;
 let buttholeButton=document.getElementById('butt');
@@ -66,23 +58,39 @@ let buttholeButton=document.getElementById('butt');
 buttholeButton.addEventListener('click',e=>{
    if (clicks==0){
        e.target.textContent="NO!";
+       e.target.style.color="white"; //#17A2B8
+       e.target.style.backgroundColor="#17A2B8";
        clicks++;
    }else if (clicks==1){
         e.target.textContent="NO WAY!";
+        e.target.style.color="white"; //#17A2B8
+        e.target.style.backgroundColor="#17A2B8";
         clicks++;
    }else if (clicks==2){
-    e.target.innerHTML=`<span style='font-size:200%;color:red;'>Knock it off!</span>`;
-    clicks++;
+        e.target.style.fontSize="2.8rem";
+        e.target.style.color="red";
+        e.target.style.backgroundColor="#17A2B8";
+        e.target.innerHTML=`Knock it off!`;
+        clicks++;
    }else{
-    e.target.innerHTML=`<span style='font-size:100%;color:white;'>Try Double Click</span>`;
-    clicks=0;
+        e.target.style.fontSize="1.8rem";
+        e.target.style.color="red";
+        console.log(e.target.style);
+        e.target.textContent=`Double Click!`;
+        clicks=0;
    }
 })
 
 buttholeButton.addEventListener('dblclick',e=>{
     e.target.textContent="Ok, FINE!";
+    e.target.style.backgroundColor="red";
+    clicks=0;
 })
 
-// let mo=document.querySelectorAll('img');
-// mo.addEventListener('mouseover',e=>{
-// })
+let navs=document.querySelectorAll('nav a');
+    navs.forEach(item=>{
+        item.addEventListener('click',e=>{
+            alert('Aborted!');
+            e.target.preventDefault();
+    })
+})
