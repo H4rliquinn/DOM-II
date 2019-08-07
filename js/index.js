@@ -104,4 +104,6 @@ TweenMax.staggerFrom('.nav-link', 4, {
     delay:1,
     // rotation:360,
     // padding:100
-  },.4) 
+  },.4)
+
+  
