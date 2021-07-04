@@ -162,6 +162,7 @@ p {
 img {
   max-width: 100%;
   height: auto;
+  opacity: 0.5;
 }
 .container {
   max-width: 800px;
@@ -233,6 +234,7 @@ img {
 .home .intro img {
   max-width: 100%;
   height: auto;
+  opacity: 1 !importantz;
 }
 .home .intro h2 {
   margin-top: 20px;
@@ -265,6 +267,8 @@ img {
 }
 .home .content-section .img-content img {
   border-radius: 10px;
+  position: relative;
+  top: 0px;
 }
 @media (max-width: 500px) {
   .home .content-section .img-content img {
